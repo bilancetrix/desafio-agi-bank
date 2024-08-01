@@ -1,0 +1,13 @@
+{
+  "name": "agi-bank-automation",
+  "version": "1.0.0",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "build": "npm install"
+  }, 
+  "author": "Davi de Andrade davi.and1993@gmail.com",
+  "devDependencies": {
+    "cypress": "^13.13.2"
+  }
+}
