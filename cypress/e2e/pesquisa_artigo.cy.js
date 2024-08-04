@@ -39,6 +39,6 @@ describe('Pesquise um artigo', function() {
     cy.get('#search-field')
       .type('TermoAleatorioInexistente{enter}')
     cy.url()
-      .should('include', 's=TermoAleatorio')
+      .should('include', 's=TermoAleatorio123')
   })
 });
