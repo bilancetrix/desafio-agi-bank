@@ -6,7 +6,7 @@
     "test": "cypress run",
     "build": "npm install",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "report:generate": "marge index.js --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "author": "Davi de Andrade davi.and1993@gmail.com",
   "devDependencies": {
