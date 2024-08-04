@@ -5,9 +5,11 @@
     "cy:open": "cypress open",
     "test": "cypress run",
     "build": "npm install"
-  }, 
+  },
   "author": "Davi de Andrade davi.and1993@gmail.com",
   "devDependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.13.2",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome-merge": "^4.3.0"
   }
 }

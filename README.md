@@ -1,19 +1,19 @@
 # cypress-agi-bank-automation
 
-Sample project for a challenge testing required.
+Projeto exemplo para desafio de teste requirido.
 
-## Pre-requirements
-It is required to have Node.js and npm installed to run this project.
+## Pre-requisitos
+É necessário ter o Node.js e o npm instalados para rodar o projeto.
 
-> I used versions v20.11.0 and 10.2.4 of Node.js and npm, respectively. I suggest you use the same or later versions.
+> Eu usei as versões, v20.11.0 do Node.js e a 10.2.4 do npm respectivamente. Eu sugiro você usar as mesmas ou mais recentes.
 
-## Installation
-Run 'npm install' (or 'npm i' for the short version) to install the dev dependencies. In this case is the: npm install cypress --save-dev
+## Instalação
+Rode o 'npm install' (ou 'npm i' encurtando) para instalar as dependências. Nesse caso é o: npm install cypress --save-dev
 
-## Tests
-You can run the tests simulating a desktop or mobile viewport
+## Testes
+Você pode rodar os teste simulando em desktop ou janela de exibição mobile.
 
 ### Desktop
-Run 'npm test' (or 'npm t' for the short version) to run the test in headless mode on a desktop viewport.
+Para rodar os testes em modo headless execute 'npm test' (ou 'npm t' encurtando).
 
-Or, run 'npm run cy:open' to open #press in interactive mode on a desktop viewport.
+Ou, rode 'npm run cy:open' para abrir o modo interativo do cypress.
