@@ -33,7 +33,7 @@ describe('Pesquise um artigo', function() {
       .should('contain.text', 'Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras.')
   });
 
-  it('Deve errar o teste', function() {
+  it('Deve errar o teste - Proposital para validar o report', function() {
     cy.get('.site-header-above-section-right > .ast-builder-layout-element')
       .click()
     cy.get('#search-field')
