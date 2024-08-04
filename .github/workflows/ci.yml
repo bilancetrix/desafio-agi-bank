@@ -1,7 +1,15 @@
 name: End-to-end tests
-on: push
+on:
+  push:
+    branches: [report]
+  pull_request:
+    branches: [report]
+
 jobs:
   cypress-run:
+    permissions:
+      id-token: write
+      pages: write
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -10,3 +18,17 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+
+      - name: Setup Pages
+        if: always()
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: ${{ github.workspace }}/cypress/reports/html
+      - name: Deploy to GitHub Pages
+        if: always()
+        id: deployment
+        uses: actions/deploy-pages@v1

@@ -5,7 +5,7 @@ describe('Pesquise um artigo', function() {
     cy.visit('https://blogdoagi.com.br/')
   })
 
-  //Faz pesquisa de conteúdo disponível no blog
+  //Faz pesquisa de conteúdo disponível no blog e valida resposta
   it('Deve procurar artigos com o termo "Investimentos"', function() {
     cy.get('.site-header-above-section-right > .ast-builder-layout-element')
       .click()
@@ -19,7 +19,7 @@ describe('Pesquise um artigo', function() {
       .should('exist')
   });
 
-  //Faz pesquisa de conteúdo indisponível no blog
+  //Faz pesquisa de conteúdo indisponível no blog e valida resposta
   it('Deve procurar artigos com o termo "TermoAleatorioInexistente"', function() {
     cy.get('.site-header-above-section-right > .ast-builder-layout-element')
       .click()
@@ -32,4 +32,13 @@ describe('Pesquise um artigo', function() {
     cy.get('.page-content > p')
       .should('contain.text', 'Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras.')
   });
+
+  it('Deve errar o teste - Proposital para validar o report', function() {
+    cy.get('.site-header-above-section-right > .ast-builder-layout-element')
+      .click()
+    cy.get('#search-field')
+      .type('TermoAleatorioInexistente{enter}')
+    cy.url()
+      .should('include', 's=TermoAleatorio123')
+  })
 });
