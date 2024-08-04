@@ -32,4 +32,13 @@ describe('Pesquise um artigo', function() {
     cy.get('.page-content > p')
       .should('contain.text', 'Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras.')
   });
+
+  it('Deve errar o teste', function() {
+    cy.get('.site-header-above-section-right > .ast-builder-layout-element')
+      .click()
+    cy.get('#search-field')
+      .type('TermoAleatorioInexistente{enter}')
+    cy.url()
+      .should('include', 's=TermoAleatorio')
+  })
 });

@@ -4,12 +4,6 @@ on:
     branches: [report]
   pull_request:
     branches: [report]
-  workflow_dispatch:
-    inputs:
-      input:
-        description: "Test"
-        required: false
-        default: "World"
 
 jobs:
   cypress-run:

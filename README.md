@@ -17,3 +17,5 @@ Você pode rodar os teste simulando em desktop ou janela de exibição mobile.
 Para rodar os testes em modo headless execute 'npm test' (ou 'npm t' encurtando).
 
 Ou, rode 'npm run cy:open' para abrir o modo interativo do cypress.
+
+o projeto foi desenvolvido publicando com github actions no github pages, logo, você pode visualizar ao relatório no link à seguir: https://bilancetrix.github.io/desafio-agi-bank/
