@@ -4,9 +4,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "test": "cypress run",
-    "build": "npm install",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "marge index.js --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "build": "npm install"
   },
   "author": "Davi de Andrade davi.and1993@gmail.com",
   "devDependencies": {
