@@ -23,6 +23,7 @@ jobs:
         if: always()
         uses: actions/configure-pages@v2
       - name: Upload artifact
+        if: always()
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
